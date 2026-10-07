@@ -488,7 +488,7 @@ img {
 
 .card-volley {
   background-color: #0a1f12;
-  background-image: url('../assets/volley/clip-bots-rally-poster.jpg');
+  background-image: url('../assets/volley/card.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -950,6 +950,42 @@ img {
   color: var(--text-muted);
 }
 
+/* Stacked overview: full-width text + a key-facts grid underneath (no tall sidebar beside short copy) */
+.project-content--stacked {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;                         /* hairline dividers: the grid background shows through the gaps */
+  margin: 0;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.project-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+}
+
+.project-fact dt,
+.project-fact dd {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .project-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 420px) {
+  .project-fact { padding: 14px 14px; }
+}
+
 .sidebar-label::before {
   content: '// ';
   color: var(--accent);
@@ -1228,9 +1264,15 @@ img {
   padding: 56px 0;
   border-bottom: 1px solid var(--border);
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px minmax(0, 1fr);
   gap: 48px;
   align-items: start;
+}
+
+/* Grid items default to min-width:auto, so a code block's long lines set the column's minimum and push the
+   whole section wider than a phone screen. Let the column shrink; the <pre> scrolls sideways instead. */
+.deepdive-body {
+  min-width: 0;
 }
 
 .deepdive-block:last-child {
@@ -1420,7 +1462,7 @@ img {
 
 @media (max-width: 900px) {
   .deepdive-block {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 18px;
   }
   .deepdive-meta {
