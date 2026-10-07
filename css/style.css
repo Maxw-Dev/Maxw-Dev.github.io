@@ -1460,3 +1460,38 @@ img {
     min-height: 480px;
   }
 }
+
+/* Sound toggle on muted-autoplay video (project pages) */
+.media-sound {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f5f0e8;
+  background: rgba(10, 10, 10, 0.72);
+  border: 1px solid rgba(245, 240, 232, 0.35);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.media-sound:hover,
+.media-sound:focus-visible {
+  background: rgba(10, 10, 10, 0.88);
+  border-color: var(--accent);
+  color: #fff;
+  outline: none;
+}
+
+.media-sound .snd-wave { opacity: 0.35; transition: opacity 0.15s; }
+.media-sound.is-on { border-color: var(--accent); color: var(--accent); }
+.media-sound.is-on .snd-wave { opacity: 1; }
