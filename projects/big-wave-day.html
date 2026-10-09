@@ -32,7 +32,7 @@
 
   <!-- Hero -->
   <div class="project-hero">
-    <p class="project-eyebrow">One-Button Surfing Game &mdash; Two-Person Team, One Month</p>
+    <p class="project-eyebrow">Digital Game Design Class &mdash; One-Button Game, 5 Weeks</p>
     <h1 class="project-title">Big Wave Day</h1>
     <div class="project-tags">
       <span class="project-tag">Godot 4 / GDScript</span>
@@ -76,17 +76,18 @@
       <div class="project-description">
         <h2>Overview</h2>
         <p>
-          Big Wave Day is a short <strong>one-button surfing game</strong>: an animal on a surfboard, one big wave, about
-          half a minute. You are always carving. A tap switches which way you're turning, and holding turns hard. Flip at
+          Big Wave Day was made for a digital game design class where the brief was a <strong>one-button game</strong>:
+          the whole thing had to play with a single input. It's a short surfing game: an animal on a surfboard, one big
+          wave, about half a minute. You are always carving. A tap switches which way you're turning, and holding turns hard. Flip at
           the top of a turn and you pump faster; with enough speed you can tuck into the barrel, or go straight up the face
           and launch off the lip. Nothing scores you while you ride. The wave dies down in front of an island, the game
           replays your best five seconds, and you go again.
         </p>
         <p>
-          <strong>Alex Duggan and I built it in Godot over a month.</strong> Alex modeled the animals and the boat, built out the
-          end-of-wave card and wrote the music. I built the wave, the riding, the camera, the water and islands, and the
-          sound effects. Apart from Alex's models and music, everything you see and hear is <strong>generated in code when
-          the game starts</strong>.
+          <strong>We made it as a team of two over five weeks, in Godot.</strong> My part was the riding and the wave, from
+          design through code, the camera and the replay, the technical art (the water, the islands and the surfboards)
+          and every sound effect. Apart from the animal models and the music, everything you see and hear is
+          <strong>generated in code when the game starts</strong>.
         </p>
       </div>
     </div>
@@ -94,11 +95,11 @@
     <dl class="project-facts">
       <div class="project-fact"><dt class="sidebar-label">Platform</dt><dd class="sidebar-value">Web &middot; desktop &amp; phone</dd></div>
       <div class="project-fact"><dt class="sidebar-label">Engine</dt><dd class="sidebar-value">Godot 4.6 &middot; GDScript</dd></div>
-      <div class="project-fact"><dt class="sidebar-label">Input</dt><dd class="sidebar-value">One button &middot; space or tap</dd></div>
-      <div class="project-fact"><dt class="sidebar-label">Modes</dt><dd class="sidebar-value">Timed waves &middot; endless</dd></div>
-      <div class="project-fact"><dt class="sidebar-label">Team</dt><dd class="sidebar-value">2 &mdash; with Alex Duggan</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Brief</dt><dd class="sidebar-value">One button &middot; space or tap</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Course</dt><dd class="sidebar-value">Digital game design class</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Team</dt><dd class="sidebar-value">2 people</dd></div>
       <div class="project-fact"><dt class="sidebar-label">My Role</dt><dd class="sidebar-value">Design, code, tech art, SFX</dd></div>
-      <div class="project-fact"><dt class="sidebar-label">Build</dt><dd class="sidebar-value">1 month &middot; Sep&ndash;Oct 2026</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Build</dt><dd class="sidebar-value">5 weeks &middot; Sep&ndash;Oct 2026</dd></div>
       <div class="project-fact"><dt class="sidebar-label">Status</dt><dd class="sidebar-value">Released on itch.io &middot; Oct 2026</dd></div>
     </dl>
   </div>
@@ -117,7 +118,8 @@
       <div class="deepdive-body">
         <h3>One Button, Always Turning</h3>
         <p>
-          The surfer never goes straight. Every tick the velocity rotates in the direction you're turning, so the board
+          One button was the brief, so the whole control scheme had to come out of a single input. The surfer never goes
+          straight. Every tick the velocity rotates in the direction you're turning, so the board
           always points where it's travelling, and the button only decides which way it rotates: a tap flips it, and
           <strong>holding past 0.18&nbsp;s turns nearly three times as hard</strong>. Gravity pulls along the face in
           proportion to how steep it is, and drag is quadratic, so speed is something you build and spend rather than a
@@ -271,7 +273,7 @@ func local_point(d: float, h: float) -&gt; Vector3:
       <div class="deepdive-body">
         <h3>Water, Islands and Sound From Code</h3>
         <p>
-          Apart from Alex's animals, boat and music, everything is built when the game boots. The wave and the open ocean
+          Apart from the animal models, the boat and the music, everything is built when the game boots. The wave and the open ocean
           <strong>share the same water shading code</strong>, so there's no line where they meet, and around the home island the same
           water turns turquoise and see-through over a seabed of sand and rocks. The islands are put together from
           primitives (a sand dome, jungle hills, palms with leaning, tapered trunks, rocks at the waterline) and merged into
@@ -324,7 +326,7 @@ func local_point(d: float, h: float) -&gt; Vector3:
           The clips on this page were filmed the same way: a bot rides, and a small harness saves every frame.
         </p>
         <div class="deepdive-stats">
-          <span class="deepdive-stat"><strong>1</strong> month</span>
+          <span class="deepdive-stat"><strong>5</strong> weeks</span>
           <span class="deepdive-stat"><strong>41</strong> commits between two people</span>
           <span class="deepdive-stat"><strong>3</strong> bots: pump, air, barrel</span>
         </div>
