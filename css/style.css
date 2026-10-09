@@ -493,6 +493,13 @@ img {
   background-position: center;
 }
 
+.card-bigwave {
+  background-color: #1d5fa8;
+  background-image: url('../assets/bigwaveday/card.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 /* ==========================================
    About Section
    ========================================== */
@@ -1537,3 +1544,71 @@ img {
 .media-sound .snd-wave { opacity: 0.35; transition: opacity 0.15s; }
 .media-sound.is-on { border-color: var(--accent); color: var(--accent); }
 .media-sound.is-on .snd-wave { opacity: 1; }
+
+/* ==========================================
+   Playable build embed (project pages)
+   ========================================== */
+.game-play {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f5f0e8;
+  background: rgba(10, 10, 10, 0.72);
+  border: 1px solid rgba(245, 240, 232, 0.35);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.game-play:hover,
+.game-play:focus-visible {
+  background: rgba(10, 10, 10, 0.88);
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.game-embed.is-playing .game-poster,
+.game-embed.is-playing .game-play { display: none; }
+.game-embed iframe { background: #000; }
+
+/* The game frame draws its own pointer; the site's cursor ring steps aside while over it. */
+body.cursor-off .cursor,
+body.cursor-off .cursor-dot { opacity: 0; }
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: -8px 0 6px;
+}
+
+.project-links a,
+.project-links button {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  transition: opacity 0.2s ease;
+}
+
+.project-links a:hover,
+.project-links button:hover { opacity: 0.65; }
+.project-links [hidden] { display: none; }
+
+.code-caption a { color: var(--accent); }
+
+/* Screenshot strip inside a deep-dive section */
+.deepdive-shots { margin: 24px 0 8px; }
+

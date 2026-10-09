@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Wave Day &mdash; Maxwell Wainwright</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html#projects" class="nav-back">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Projects
+      </a>
+      <div class="nav-links">
+        <a href="../index.html#projects" class="nav-link">Work</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="project-hero">
+    <p class="project-eyebrow">One-Button Surfing Game &mdash; Two-Person Team, One Month</p>
+    <h1 class="project-title">Big Wave Day</h1>
+    <div class="project-tags">
+      <span class="project-tag">Godot 4 / GDScript</span>
+      <span class="project-tag">Procedural Mesh</span>
+      <span class="project-tag">Shaders</span>
+      <span class="project-tag">Game Feel</span>
+      <span class="project-tag">WebGL2</span>
+      <span class="project-tag">Playable in Browser</span>
+      <span class="project-tag">Team of 2</span>
+    </div>
+  </div>
+
+  <!-- Playable build: the itch.io web export, only downloaded when the visitor presses Play -->
+  <div class="project-media">
+    <div class="media-container game-embed" id="gameEmbed">
+      <img class="game-poster" src="../assets/bigwaveday/play-poster.jpg" alt="A fox carving under a tall wave face, with an island on the horizon">
+      <button class="game-play" id="gamePlay" type="button">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M7 4.5v15l12-7.5-12-7.5z" fill="currentColor"/>
+        </svg>
+        <span>Play in browser</span>
+      </button>
+    </div>
+    <p class="code-caption">This is the real web build, running on the page. Click or tap to start, then again to drop in. Every tap after that switches which way you're carving, and holding turns hard. The space bar works too. Hold on the title screen for endless mode.</p>
+    <div class="project-links">
+      <button type="button" id="gameFullscreen" hidden>Fullscreen &#8599;</button>
+      <a href="../assets/bigwaveday/play/index.html" target="_blank" rel="noopener">Open in its own tab &#8599;</a>
+      <a href="https://maxtheninja155.itch.io/big-wave-day" target="_blank" rel="noopener">itch.io page &rarr;</a>
+      <a href="https://github.com/Maxw-Dev/BigWaveDay" target="_blank" rel="noopener">Source on GitHub &rarr;</a>
+    </div>
+    <div class="deepdive-stats" style="justify-content: center;">
+      <span class="deepdive-stat"><strong>1</strong> button</span>
+      <span class="deepdive-stat"><strong>6</strong> animals, a new board every wave</span>
+      <span class="deepdive-stat"><strong>0</strong> numbers on screen while you ride</span>
+    </div>
+  </div>
+
+  <!-- Overview + key facts -->
+  <div class="project-content project-content--stacked">
+    <div class="project-main">
+      <div class="project-description">
+        <h2>Overview</h2>
+        <p>
+          Big Wave Day is a short <strong>one-button surfing game</strong>: an animal on a surfboard, one big wave, about
+          half a minute. You are always carving. A tap switches which way you're turning, and holding turns hard. Flip at
+          the top of a turn and you pump faster; with enough speed you can tuck into the barrel, or go straight up the face
+          and launch off the lip. Nothing scores you while you ride. The wave dies down in front of an island, the game
+          replays your best five seconds, and you go again.
+        </p>
+        <p>
+          <strong>Alex Duggan and I built it in Godot over a month.</strong> Alex modeled the animals and the boat, built out the
+          end-of-wave card and wrote the music. I built the wave, the riding, the camera, the water and islands, and the
+          sound effects. Apart from Alex's models and music, everything you see and hear is <strong>generated in code when
+          the game starts</strong>.
+        </p>
+      </div>
+    </div>
+
+    <dl class="project-facts">
+      <div class="project-fact"><dt class="sidebar-label">Platform</dt><dd class="sidebar-value">Web &middot; desktop &amp; phone</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Engine</dt><dd class="sidebar-value">Godot 4.6 &middot; GDScript</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Input</dt><dd class="sidebar-value">One button &middot; space or tap</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Modes</dt><dd class="sidebar-value">Timed waves &middot; endless</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Team</dt><dd class="sidebar-value">2 &mdash; with Alex Duggan</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">My Role</dt><dd class="sidebar-value">Design, code, tech art, SFX</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Build</dt><dd class="sidebar-value">1 month &middot; Sep&ndash;Oct 2026</dd></div>
+      <div class="project-fact"><dt class="sidebar-label">Status</dt><dd class="sidebar-value">Released on itch.io &middot; Oct 2026</dd></div>
+    </dl>
+  </div>
+
+  <!-- ============================== -->
+  <!-- Deep dive                      -->
+  <!-- ============================== -->
+  <section class="project-deepdive">
+
+    <!-- 01 Feel -->
+    <div class="deepdive-block">
+      <div class="deepdive-meta">
+        <span class="deepdive-num">01</span>
+        <span class="deepdive-label">Feel</span>
+      </div>
+      <div class="deepdive-body">
+        <h3>One Button, Always Turning</h3>
+        <p>
+          The surfer never goes straight. Every tick the velocity rotates in the direction you're turning, so the board
+          always points where it's travelling, and the button only decides which way it rotates: a tap flips it, and
+          <strong>holding past 0.18&nbsp;s turns nearly three times as hard</strong>. Gravity pulls along the face in
+          proportion to how steep it is, and drag is quadratic, so speed is something you build and spend rather than a
+          number you hold.
+        </p>
+
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="code-block-lang">GDScript &middot; Godot 4</span>
+            <span class="code-block-file">scripts/surfer.gd &middot; trimmed</span>
+          </div>
+<pre><code># Every tick. vel is in face space: x along the wave, y up the face, in m/s.
+# Steer: rotate the velocity. The board always points where it travels.
+var rate := deg_to_rad(sharp_turn_rate if is_sharp else turn_rate)
+vel = vel.rotated(turn_dir * rate * delta)
+
+# Gravity along the face: zero on the flats, full g on a vertical section. A committed straight climb
+# for an air feels less of it, and less drag, so you reach the lip with the speed you built.
+climb = smoothstep(climb_assist_from_deg, climb_assist_full_deg, heading_deg())
+var g_along := gravity * gravity_scale * sin(wave.slope_angle(pos.x, pos.y)) \
+        * lerpf(1.0, climb_gravity_keep, climb)
+vel.y -= g_along * delta
+
+# Drag: quadratic, plus the sharp-turn scrub.
+var k := (drag + scrub) * lerpf(1.0, climb_drag_keep, climb)
+vel -= vel * vel.length() * k * delta</code></pre>
+        </div>
+
+        <p>
+          Speed comes from timing. When you flip near the top of a climb, the game reads your heading at that instant
+          against a curve, and a well-timed flip adds <strong>up to 4&nbsp;m/s</strong>: half straight away, half fed in
+          over the next 0.3&nbsp;s as you come back down, so it feels like a push rather than a jolt. The same flip out on
+          the flat shoulder is worth a quarter as much, which keeps good riding in the pocket. There's no number for a good
+          pump, just a gold burst off the rail and a ding.
+        </p>
+        <p>
+          Airs come out of the same physics. Climb through the lip fast enough and you leave the face on a real ballistic
+          arc, with the sideways drift steered so you always come back down onto the face. Playtesters said going for an
+          air felt flat because the climb bled their speed, so a committed straight climb now feels about
+          <strong>half the gravity and drag</strong>. Carving turns flip before it kicks in, so pumping is unchanged.
+        </p>
+
+        <div class="media-container" style="margin-top: 28px;">
+          <video
+            src="../assets/bigwaveday/air.mp4"
+            poster="../assets/bigwaveday/air-poster.jpg"
+            autoplay muted loop playsinline preload="metadata">
+          </video>
+        </div>
+        <p class="code-caption">A basilisk pumps down the line, holds a bottom turn straight up the face and gets 2&nbsp;m of air with a 290&deg; spin.</p>
+
+        <p>
+          Each animal gets a new board every wave, and <strong>the board's length sets how fast it turns</strong>: the carve
+          rate scales with (reference length &divide; board length)<sup>0.8</sup>, times the animal's own agility. A
+          seven-foot fish whips around; an eleven-foot gun turns like a truck.
+        </p>
+        <div class="screenshots-grid deepdive-shots">
+          <figure>
+            <div class="screenshot-item"><img src="../assets/bigwaveday/rider-penguin.jpg" alt="A penguin carving on a red and white fish" loading="lazy"></div>
+            <figcaption class="screenshot-caption">Penguin &middot; 7&prime;10&Prime; fish</figcaption>
+          </figure>
+          <figure>
+            <div class="screenshot-item"><img src="../assets/bigwaveday/rider-owl.jpg" alt="An owl on a blue fish throwing a gold pump burst" loading="lazy"></div>
+            <figcaption class="screenshot-caption">Owl &middot; 7&prime;1&Prime; fish, mid-pump</figcaption>
+          </figure>
+          <figure>
+            <div class="screenshot-item"><img src="../assets/bigwaveday/rider-bear.jpg" alt="A polar bear on a long red gun" loading="lazy"></div>
+            <figcaption class="screenshot-caption">Bear &middot; 11&prime;2&Prime; gun</figcaption>
+          </figure>
+        </div>
+        <div class="deepdive-stats">
+          <span class="deepdive-stat"><strong>0.18 s</strong> of hold for a hard turn</span>
+          <span class="deepdive-stat"><strong>+4 m/s</strong> from a perfect pump</span>
+          <span class="deepdive-stat"><strong>6</strong> animals, each with its own agility</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Wave -->
+    <div class="deepdive-block">
+      <div class="deepdive-meta">
+        <span class="deepdive-num">02</span>
+        <span class="deepdive-label">The Wave</span>
+      </div>
+      <div class="deepdive-body">
+        <h3>A Wave Made of Circles</h3>
+        <p>
+          The whole wave is one function of two numbers: how far down the line you are from the breaking point, and how high
+          up the face. At any point the face is <strong>an arc of a circle</strong> whose radius and sweep depend on that
+          distance: about 7&nbsp;m tall and past vertical in the pocket, easing to a 3&nbsp;m, 45&deg; shoulder further down
+          the line. Within 8&nbsp;m of the break the lip keeps turning around a tighter circle and throws over into the
+          barrel. Behind the break the profile collapses into a rounded pile of whitewater.
+        </p>
+
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="code-block-lang">GDScript &middot; Godot 4</span>
+            <span class="code-block-file">scripts/wave_shape.gd &middot; trimmed</span>
+          </div>
+<pre><code># d = metres ahead of the break, h = height up the face (0 trough, 1 lip, 1..2 the curl).
+func arc_radius(d: float) -&gt; float:
+    return lip_height(d) / (1.0 - cos(lip_angle(d)))
+
+func local_point(d: float, h: float) -&gt; Vector3:
+    # Position in the break's frame: x = d (not yet mirrored for direction).
+    if h &gt; 1.0:
+        return _curl_point(d, (h - 1.0) * curl_angle(d))
+    var s := h * arc_length(d)
+    if s &lt;= 0.0:
+        return Vector3(d, 0.0, -s)
+    var r := arc_radius(d)
+    var a := s / r
+    return Vector3(d, r * (1.0 - cos(a)), -r * sin(a))</code></pre>
+        </div>
+
+        <p>
+          The surfer is simulated entirely in those two numbers and <strong>never touches a mesh</strong>. The same function
+          places the board in 3D and builds the wave's vertices, so the face you see and the face you ride can't disagree.
+          The mesh is built once and slides along with the break, while the water shader samples every pattern from world
+          position, so the shape moves but the water stays put, and you can watch yourself slide across it.
+        </p>
+        <p>
+          Timed waves don't just stop. Over the last eight seconds <strong>the whole wave shrinks to a fifth of its
+          size</strong> and the line runs out beside an island. The shader and the physics use the same size formula, so
+          what you ride shrinks exactly as much as what you see. Pull far ahead of the break onto the flat shoulder and it
+          quietly speeds up until the pocket is back under you, but it never chases a rider who has slowed down.
+        </p>
+
+        <div class="media-container" style="margin-top: 28px;">
+          <video
+            src="../assets/bigwaveday/barrel.mp4"
+            poster="../assets/bigwaveday/barrel-poster.jpg"
+            autoplay muted loop playsinline preload="metadata">
+          </video>
+        </div>
+        <p class="code-caption">Letting the break catch up: the camera dollies into the tube as the lip throws over, then the penguin pumps back out.</p>
+        <div class="deepdive-stats">
+          <span class="deepdive-stat"><strong>1</strong> shape function, drawn and ridden</span>
+          <span class="deepdive-stat"><strong>~38k</strong> vertices, one draw call</span>
+          <span class="deepdive-stat"><strong>8 s</strong> for a wave to die</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Look -->
+    <div class="deepdive-block">
+      <div class="deepdive-meta">
+        <span class="deepdive-num">03</span>
+        <span class="deepdive-label">Tech Art &amp; Audio</span>
+      </div>
+      <div class="deepdive-body">
+        <h3>Water, Islands and Sound From Code</h3>
+        <p>
+          Apart from Alex's animals, boat and music, everything is built when the game boots. The wave and the open ocean
+          <strong>share the same water shading code</strong>, so there's no line where they meet, and around the home island the same
+          water turns turquoise and see-through over a seabed of sand and rocks. The islands are put together from
+          primitives (a sand dome, jungle hills, palms with leaning, tapered trunks, rocks at the waterline) and merged into
+          one flat-shaded mesh each. In endless mode a chain of them keeps streaming in ahead, so you never end up surfing
+          toward empty ocean.
+        </p>
+        <p>
+          The surfboards are lofted from elliptical rail sections, with a new length and colour every wave. <strong>Every
+          sound effect is synthesized at startup</strong>: the splash off a turn, the ding of a pump, the whoosh of an air,
+          the crash when the whitewater catches you, and the roar of the break, which gets louder as it closes in.
+        </p>
+        <p>
+          All of it has to run in a phone's browser, so it targets Godot's WebGL2 renderer. The wave is one mesh with one
+          material, and its lumps, foam, the ribs of water running up the face and the glow at the lip are all done in the
+          shader. The playable build at the top of this page is the same export that's on itch.io.
+        </p>
+
+        <div class="media-container" style="margin-top: 28px;">
+          <video
+            src="../assets/bigwaveday/island.mp4"
+            poster="../assets/bigwaveday/island-poster.jpg"
+            autoplay muted loop playsinline preload="metadata">
+          </video>
+        </div>
+        <p class="code-caption">The end of a timed wave: it shrinks over its last seconds, the camera pulls out wide, and the line runs out in front of the island's shallows.</p>
+      </div>
+    </div>
+
+    <!-- 04 Process -->
+    <div class="deepdive-block">
+      <div class="deepdive-meta">
+        <span class="deepdive-num">04</span>
+        <span class="deepdive-label">Process</span>
+      </div>
+      <div class="deepdive-body">
+        <h3>Tuned by Bots, Changed by Playtests</h3>
+        <p>
+          We worked from a short plan and a checkpoint list, with playtests along the way, and most of the big changes came
+          out of those: the camera rig over the break, a bigger and rounder pocket, the climb assist for airs.
+        </p>
+        <p>
+          To check that a change did what it was meant to, I drove the real game headless with <strong>scripted bots that
+          press the same single button a player does</strong>: a pumping bot that reports top speed, average speed and how
+          far ahead of the break it gets; an air bot that measures speed at the lip and air height; and a stalling bot that
+          lets the barrel catch it and checks how close the camera ever gets to the water. A change had to move the number
+          it was for and leave the others alone. The climb assist took the air bot from about 1.5&nbsp;m airs to over
+          2&nbsp;m while the pumping bot's numbers stayed put.
+        </p>
+        <p>
+          The clips on this page were filmed the same way: a bot rides, and a small harness saves every frame.
+        </p>
+        <div class="deepdive-stats">
+          <span class="deepdive-stat"><strong>1</strong> month</span>
+          <span class="deepdive-stat"><strong>41</strong> commits between two people</span>
+          <span class="deepdive-stat"><strong>3</strong> bots: pump, air, barrel</span>
+        </div>
+        <p class="code-caption">Released on <a href="https://maxtheninja155.itch.io/big-wave-day" target="_blank" rel="noopener">itch.io</a> in October 2026. Source on <a href="https://github.com/Maxw-Dev/BigWaveDay" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Prev / Next -->
+  <div class="project-nav">
+    <a href="elementals.html" class="project-nav-link">
+      <span class="nav-direction">Previous Project</span>
+      <span class="nav-proj-title">&larr; Elementals</span>
+    </a>
+    <a href="fruit-ninjas.html" class="project-nav-link next">
+      <span class="nav-direction">Next Project</span>
+      <span class="nav-proj-title">Fruit Ninjas &rarr;</span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-name">Maxwell Wainwright</span>
+      <div class="footer-links">
+        <a href="https://maxtheninja155.itch.io/" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://github.com/Maxw-Dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/maxwell-wainwright/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <span class="footer-copy">&copy; 2026</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Playable build: nothing is downloaded until the visitor presses Play. Then the web export loads in an
+    // iframe and takes keyboard focus so the space bar goes to the game, not the page.
+    (function () {
+      var box = document.getElementById('gameEmbed');
+      var play = document.getElementById('gamePlay');
+      var full = document.getElementById('gameFullscreen');
+      var ring = document.getElementById('cursor');
+      if (!box || !play) return;
+      var frame = null;
+
+      play.addEventListener('click', function () {
+        frame = document.createElement('iframe');
+        frame.src = '../assets/bigwaveday/play/index.html';
+        frame.title = 'Big Wave Day, playable web build';
+        frame.setAttribute('allow', 'autoplay; fullscreen');
+        frame.addEventListener('load', function () {
+          frame.focus({ preventScroll: true });
+          // Godot swallows wheel events and the game never uses them, so pass scrolling through to the page.
+          // Same-origin frame, so the listener can sit on its window ahead of the engine's.
+          frame.contentWindow.addEventListener('wheel', function (e) {
+            var dy = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaMode === 2 ? e.deltaY * window.innerHeight : e.deltaY;
+            window.scrollBy(0, dy);
+          }, { capture: true, passive: true });
+        });
+        box.appendChild(frame);
+        box.classList.add('is-playing');
+        document.body.classList.add('cursor-off');   // the pointer is over the game right now
+        if (ring) ring.classList.remove('hovering');
+        if (full && (document.fullscreenEnabled || document.webkitFullscreenEnabled)) full.hidden = false;
+      });
+
+      if (full) {
+        full.addEventListener('click', function () {
+          if (!frame) return;
+          var go = frame.requestFullscreen || frame.webkitRequestFullscreen;
+          if (go) go.call(frame);
+          frame.focus({ preventScroll: true });
+        });
+      }
+
+      // The game draws its own pointer, so the site's cursor ring steps aside while over it.
+      box.addEventListener('mouseenter', function () { if (frame) document.body.classList.add('cursor-off'); });
+      box.addEventListener('mouseleave', function () { document.body.classList.remove('cursor-off'); });
+    })();
+  </script>
+</body>
+</html>
